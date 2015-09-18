@@ -1,5 +1,6 @@
 # Include common elements
 source $(_decompose-project-root)/.decompose/environment/lib/web/elements
+source $(_decompose-project-root)/.decompose/environment/lib/backup/elements
 
 ELEMENTS_POST_PROCESS=( "${ELEMENTS_WEB_POST_PROCESS[@]}" )
 
