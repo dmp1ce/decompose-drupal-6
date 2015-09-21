@@ -7,4 +7,10 @@ ELEMENTS_POST_PROCESS=( "${ELEMENTS_WEB_POST_PROCESS[@]}" )
 # Where to write current version information to
 PROJECT_VERSION_FILE="version.txt"
 
+# Default Database settings
+PROJECT_DB_DATABASE="app"
+PROJECT_DB_USER="app_user"
+PROJECT_DB_PASSWORD="password"
+PROJECT_DB_ROOT_PASSWORD="dont_user_root_user"
+
 # vim:syntax=sh
