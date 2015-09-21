@@ -13,4 +13,7 @@ PROJECT_DB_USER="app_user"
 PROJECT_DB_PASSWORD="password"
 PROJECT_DB_ROOT_PASSWORD="dont_user_root_user"
 
+# PHP timezone
+PROJECT_PHP_TIMEZONE="America/New_York"
+
 # vim:syntax=sh

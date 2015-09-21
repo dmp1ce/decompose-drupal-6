@@ -51,5 +51,8 @@ COPY msmtp/msmtp_php /etc/msmtp_php
 RUN chmod 600 /etc/msmtp_php && chown www-data:www-data /etc/msmtp_php && \
 sed -i 's|;sendmail_path =$|sendmail_path = "{{PROJECT_SENDMAIL_PATH}}"|g' /usr/local/etc/php/php.ini
 
+# Set timezone
+RUN sed -i 's|;date.timezone =$|date.timezone = "{{PROJECT_PHP_TIMEZONE}}"|g' /usr/local/etc/php/php.ini
+
 # Set working directory
 WORKDIR /srv/http/source

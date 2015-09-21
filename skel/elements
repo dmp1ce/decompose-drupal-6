@@ -23,6 +23,9 @@ PROJECT_BACKUP_EXCLUDES=".gitmodules"
 # PHP version
 PROJECT_PHP_VERSION="5.4-fpm"
 
+# PHP timezone
+PROJECT_PHP_TIMEZONE="America/New_York"
+
 # No default nginx server
 PROJECT_NGINX_DEFAULT_HOST=
 
