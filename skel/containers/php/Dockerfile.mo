@@ -10,7 +10,7 @@ RUN apt-get -y --no-install-recommends install libgd-dev libjpeg62-turbo-dev && 
 docker-php-ext-configure gd --with-jpeg-dir=/usr/include && \
 docker-php-ext-install gd
 # MySQL
-RUN docker-php-ext-install mysql
+RUN docker-php-ext-install {{PROJECT_PHP_MYSQL_EXTENSION}}
 # mbstring
 RUN docker-php-ext-configure mbstring --enable-mbstring && \
 docker-php-ext-install mbstring
