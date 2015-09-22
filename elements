@@ -15,5 +15,6 @@ PROJECT_DB_ROOT_PASSWORD="dont_user_root_user"
 
 # PHP timezone
 PROJECT_PHP_TIMEZONE="America/New_York"
+PROJECT_PHP_MYSQL_EXTENSION="mysqli"
 
 # vim:syntax=sh
