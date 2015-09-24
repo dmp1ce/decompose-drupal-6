@@ -51,6 +51,9 @@ backup:
     - backup_data{{/DEVELOPMENT}}
   links:
     - db
+{{#PRODUCTION}}
+  restart: always
+{{/PRODUCTION}}
 {{#DEVELOPMENT}}
 backup_data:
   build: containers/backup_data/.
