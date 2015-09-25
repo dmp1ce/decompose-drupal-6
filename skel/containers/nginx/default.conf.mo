@@ -69,11 +69,8 @@ server {
   }
  
   # Fighting with Styles? This little gem is amazing.
-  # This is for D6
-  #location ~ ^/sites/.*/files/imagecache/ {
-  # This is for D7 and D8
-  location ~ ^/sites/.*/files/styles/ {
-    try_files $uri @rewrite;
+  location ~ ^/sites/.*/files/imagecache/ {
+      try_files $uri @rewrite;
   }
 
   location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
