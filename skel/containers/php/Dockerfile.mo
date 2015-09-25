@@ -6,8 +6,8 @@ RUN apt-get -y update
 
 # Install required PHP extensions.
 # gd
-RUN apt-get -y --no-install-recommends install libgd-dev libjpeg62-turbo-dev && \
-docker-php-ext-configure gd --with-jpeg-dir=/usr/include && \
+RUN apt-get -y --no-install-recommends install libpng12-dev libjpeg-dev && \
+docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr && \
 docker-php-ext-install gd
 # MySQL
 RUN docker-php-ext-install {{PROJECT_PHP_MYSQL_EXTENSION}}
