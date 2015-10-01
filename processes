@@ -92,8 +92,11 @@ _decompose-process-up() {
   fi
 
   # Copy configuration files to nginx-proxy
-  docker cp $(_decompose-project-root)/containers/nginx_proxy/vhost.d/. $nginx_proxy_id:/etc/nginx/vhost.d
-  docker cp $(_decompose-project-root)/containers/nginx_proxy/certs/. $nginx_proxy_id:/etc/nginx/certs
+  local nginx_proxy_dir="$(_decompose-project-root)/containers/nginx_proxy"
+  test -d "$nginx_proxy_dir/vhost.d" &&
+  docker cp "$nginx_proxy_dir"/vhost.d/. $nginx_proxy_id:/etc/nginx/vhost.d
+  test -d "$nginx_proxy_dir/certs" &&
+  docker cp $nginx_proxy_dir/certs/. $nginx_proxy_id:/etc/nginx/certs
 
   # Restart nginx-proxy
   _decompose-process-restart_nginx_proxy
