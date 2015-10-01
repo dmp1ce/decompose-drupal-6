@@ -39,9 +39,13 @@ source:
   volumes:
     - {{#DEVELOPMENT}}{{PROJECT_SOURCE_HOST_PATH}}:{{/DEVELOPMENT}}{{PROJECT_SOURCE_CONTAINER_PATH}}
   command: "true"
+  labels:
+    - "data_container=true"
 data:
   build: containers/data/.
   command: "true"
+  labels:
+    - "data_container=true"
 # Backup
 backup:
   build: containers/backup/.
@@ -58,6 +62,8 @@ backup:
 backup_data:
   build: containers/backup_data/.
   command: "true"
+  labels:
+    - "data_container=true"
 {{/DEVELOPMENT}}
 
 # vim:syntax=yaml
