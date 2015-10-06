@@ -21,9 +21,6 @@ PROJECT_BACKUP_INCLUDES=".decompose containers/backup/.ssh \
   containers/backup/.duply/site_data/*.asc"
 PROJECT_BACKUP_EXCLUDES=".gitmodules"
 
-# PHP version
-PROJECT_PHP_VERSION="5.4-fpm"
-
 # PHP timezone
 PROJECT_PHP_TIMEZONE="America/New_York"
 # PHP MySQL extension
