@@ -60,7 +60,7 @@ _decompose-process-build() {
   docker pull mariadb
   docker pull debian:jessie
   docker pull nginx
-  docker pull php:$PROJECT_PHP_VERSION
+  docker pull dmp1ce/php-fpm-drupal:5.4
   docker pull jwilder/nginx-proxy
 
   # Generate nginx-proxy configurations
