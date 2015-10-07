@@ -12,5 +12,9 @@ sed -i 's|;sendmail_path =$|sendmail_path = "{{PROJECT_SENDMAIL_PATH}}"|g' /usr/
 # Set timezone
 RUN sed -i 's|;date.timezone =$|date.timezone = "{{PROJECT_PHP_TIMEZONE}}"|g' /usr/local/etc/php/php.ini
 
+# Set max upload size
+#RUN sed -i 's|post_max_size = 8M$|post_max_size = 20M|g' /usr/local/etc/php/php.ini
+#RUN sed -i 's|upload_max_filesize = 2M$|upload_max_filesize = 10M|g' /usr/local/etc/php/php.ini
+
 # Set working directory
 WORKDIR /srv/http/source

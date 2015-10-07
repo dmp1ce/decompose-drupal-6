@@ -3,7 +3,10 @@
 server {
   server_name {{PROJECT_NGINX_VIRTUAL_HOST}};
   root {{PROJECT_SOURCE_CONTAINER_PATH}}; ## <-- Your only path reference.
- 
+
+  # For large file uploads
+  # client_max_body_size 10m;
+
   # Enable compression, this will help if you have for instance advagg‎ module
   # by serving Gzip versions of the files.
   gzip_static on;
