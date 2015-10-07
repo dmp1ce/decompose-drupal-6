@@ -23,8 +23,6 @@ PROJECT_BACKUP_EXCLUDES=".gitmodules"
 
 # PHP timezone
 PROJECT_PHP_TIMEZONE="America/New_York"
-# PHP MySQL extension
-PROJECT_PHP_MYSQL_EXTENSION="mysqli mysql"
 
 # No default nginx server
 PROJECT_NGINX_DEFAULT_HOST=
