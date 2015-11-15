@@ -1,0 +1,11 @@
+# Custom processes
+#DECOMPOSE_PROCESSES+=( 'test' )
+#
+#_decompose-process-test() {
+#  echo "Testing"
+#}
+#_decompose-process-test_help() {
+#  echo "  Custom env process"
+#}
+
+# vim:syntax=sh
