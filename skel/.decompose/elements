@@ -1,0 +1,50 @@
+# Include constant elements
+source $(_decompose-project-root)/elements
+
+_PROJECT_NAME="projectname"
+
+PROJECT_ENVIRONMENT="development"
+PROJECT_NGINX_VIRTUAL_HOST="$_PROJECT_NAME".local
+PROJECT_NGINX_VIRTUAL_HOST_ALTS="www.$_PROJECT_NAME".local
+
+# Mail SMTP Service
+#PROJECT_SMTP_HOST=""
+#PROJECT_SMTP_USER=""
+#PROJECT_SMTP_PASSWORD=""
+
+# Mail development settings
+PROJECT_SENDMAIL_PATH="cat >> /tmp/mail.out"
+
+# Production server settings (for updating)
+#PROJECT_PRODUCTION_SERVER_IP=""
+#PROJECT_PRODUCTION_SERVER_USER="$_PROJECT_NAME"
+#PROJECT_PRODUCTION_SERVER_BASE_PATH="$_PROJECT_NAME"-base
+
+# Database settings
+PROJECT_DB_DATABASE="database_name"
+PROJECT_DB_USER="database_user_name"
+PROJECT_DB_PASSWORD="database_user_password"
+PROJECT_DB_ROOT_PASSWORD="database_root_user_password"
+
+# Backup
+#PROJECT_BACKUP_SCHEDULED_TIME='TZ="UTC" tomorrow 0500'
+#PROJECT_BACKUP_SERVER_IP=""
+# Development
+#PROJECT_BACKUP_GPG_KEY=""
+#PROJECT_BACKUP_TARGET="ssh://backupuser@$PROJECT_BACKUP_SERVER_IP/$_PROJECT_NAME"-test
+# Production
+#PROJECT_BACKUP_GPG_KEY=""
+#PROJECT_BACKUP_TARGET="ssh://backupuser@$PROJECT_BACKUP_SERVER_IP/$_PROJECT_NAME"
+#PROJECT_BACKUP_GPG_PW=""
+
+# GPG key settings
+#PROJECT_BACKUP_GPG_REALNAME="Real Name for GPG key"
+#PROJECT_BACKUP_GPG_COMMENT="Comment here"
+#PROJECT_BACKUP_GPG_EMAIL="user@example.com"
+#PROJECT_BACKUP_GPG_KEY_DIR="containers/backup/.duply/site_data"
+
+# SSH key settings
+#PROJECT_BACKUP_SSH_KEY_DIR="containers/backup/.ssh"
+#PROJECT_BACKUP_SSH_COMMENT="Comment here"
+
+# vim:syntax=sh
