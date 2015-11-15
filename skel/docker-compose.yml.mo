@@ -51,19 +51,17 @@ backup:
   build: containers/backup/.
   command: "/home/duply/backup_service"
   volumes_from:
-    - data{{#DEVELOPMENT}}
-    - backup_data{{/DEVELOPMENT}}
+    - data
+    - backup_data
   links:
     - db
 {{#PRODUCTION}}
   restart: always
 {{/PRODUCTION}}
-{{#DEVELOPMENT}}
 backup_data:
   build: containers/backup_data/.
   command: "true"
   labels:
     - "data_container=true"
-{{/DEVELOPMENT}}
 
 # vim:syntax=yaml
