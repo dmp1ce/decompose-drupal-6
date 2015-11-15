@@ -57,12 +57,10 @@ _decompose-process-build() {
   # Waiting for docker-compose fix:
   # https://github.com/docker/compose/pull/1494
   echo "Updating docker images..."
-  docker pull busybox
-  docker pull mariadb
-  docker pull debian:jessie
-  docker pull nginx
-  docker pull dmp1ce/php-fpm-drupal:5.4
   docker pull jwilder/nginx-proxy
+
+  # Get latest docker-compose.yml images
+  docker-compose pull
 
   # Generate nginx-proxy configurations
   _decompose-process-generate_nginx_proxy_configs
@@ -73,7 +71,8 @@ _decompose-process-build() {
     docker-compose rm -f source
   fi
 
-  docker-compose build
+  # Build docker-compose.yml and get the latest Dockerfile images
+  docker-compose build --pull
 }
 _decompose-process-build_help() {
   echo "  Build the project"
