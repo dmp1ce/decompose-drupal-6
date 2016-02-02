@@ -20,6 +20,10 @@ nginx:
     - data
   environment:
     - VIRTUAL_HOST={{PROJECT_NGINX_PROXY_VIRTUAL_HOSTS}}
+{{#PRODUCTION}}
+    - LETSENCRYPT_HOST={{PROJECT_NGINX_PROXY_VIRTUAL_HOSTS}}
+    - LETSENCRYPT_EMAIL=dave@upgradeya.com
+{{/PRODUCTION}}
   log_driver: "journald"
 {{#PRODUCTION}}
   restart: always
